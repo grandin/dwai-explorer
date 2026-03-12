@@ -1,0 +1,86 @@
+[
+  {
+    "path_id": "WF-001",
+    "label": "End-to-End Discovery to Concept",
+    "description": "A product designer joins a new project cold and needs to move from zero domain knowledge to a validated concept direction. The path covers desk research, research planning, fieldwork, synthesis, framing, and concept ideation in a single coherent arc.",
+    "sequence": ["EXP-001", "EXP-002", "EXP-003", "EXP-007", "DEF-016", "DEF-010", "DEF-011", "DEF-012", "CON-019"],
+    "stretch_flags": []
+  },
+  {
+    "path_id": "WF-002",
+    "label": "Lean Research Sprint for Concept Validation",
+    "description": "A UX researcher running a time-boxed concept validation study designs the evaluation, builds personalised stimuli, runs moderated sessions, analyses findings, and shares highlights with stakeholders — all within a compressed sprint timeline.",
+    "sequence": ["VAL-039", "CON-025", "EXP-007", "DEF-016", "VAL-032", "VAL-033", "VAL-036"],
+    "stretch_flags": ["CON-025 → EXP-007: Concept UC followed by Explore UC — phase regression; intentional in a validation sprint context where stimuli are built before recruitment and screening"]
+  },
+  {
+    "path_id": "WF-003",
+    "label": "Product Designer Feature Design End-to-End",
+    "description": "A mid-level product designer takes a feature from brief through wireframes, prototyping, visual QA, and handoff. The path reflects a solo practitioner doing cross-phase work on a well-scoped feature.",
+    "sequence": ["DEF-014", "CON-019", "CON-020", "CON-023", "CON-021", "VAL-037", "VAL-041", "VAL-034", "DEL-043", "DEL-046"],
+    "stretch_flags": []
+  },
+  {
+    "path_id": "WF-004",
+    "label": "Visual Brand Direction for New Product",
+    "description": "A brand or visual designer is tasked with establishing the visual language for a new product. They explore aesthetics through moodboarding, generate variants, remix references into a concept direction, critique it, and prepare a stakeholder walkthrough.",
+    "sequence": ["EXP-006", "CON-027", "CON-022", "CON-031", "CON-030", "VAL-035", "DEL-049"],
+    "stretch_flags": []
+  },
+  {
+    "path_id": "WF-005",
+    "label": "Design System Team Delivery Infrastructure",
+    "description": "A design system lead builds the AI-ready infrastructure needed to make the team's system queryable by agents, then sets up governance pipelines and ongoing compliance monitoring to manage system health at scale.",
+    "sequence": ["DEL-055", "DEL-048", "DEL-047", "DEL-054", "DEL-056", "IMP-061", "IMP-068"],
+    "stretch_flags": []
+  },
+  {
+    "path_id": "WF-006",
+    "label": "Founder Zero-to-Prototype Without a Designer",
+    "description": "A solo founder or PM needs to get to a testable product prototype quickly without design resource. They generate first-draft cross-functional screens, scaffold a prototype, get it in front of users in a research preview, and extract a functional specification for development.",
+    "sequence": ["CON-073", "CON-074", "CON-021", "CON-070", "DEL-071"],
+    "stretch_flags": ["CON-070 → DEL-071: Research preview to functional spec extraction skips a formal validate step — intentional lean compression in a resource-constrained context"]
+  },
+  {
+    "path_id": "WF-007",
+    "label": "Research Operations Lead Building Knowledge Infrastructure",
+    "description": "A senior researcher or research ops lead establishes durable team infrastructure: a project knowledge base seeded from prior research, prompt templates governing AI interaction quality, queryable personas for stakeholder use, and a repository that pushes relevant prior findings forward to new projects.",
+    "sequence": ["DEF-017", "CON-024", "DEF-012", "IMP-062", "IMP-059", "IMP-065"],
+    "stretch_flags": ["DEF-012 → IMP-062: Persona generation (Define) to queryable personas (Improve) — real phase gap, but often collapsed in practice when a researcher builds both artifacts together"]
+  },
+  {
+    "path_id": "WF-008",
+    "label": "Design System Migration from Legacy Codebase",
+    "description": "A design system engineer takes a product with no formal design system and extracts one from the existing codebase, then architects it for AI-readiness, sets up token management and linting, and configures self-healing automation for ongoing maintenance.",
+    "sequence": ["DEL-057", "DEL-055", "DEL-048", "DEL-054", "DEL-058", "IMP-067"],
+    "stretch_flags": []
+  },
+  {
+    "path_id": "WF-009",
+    "label": "Continuous Improvement Loop Post-Launch",
+    "description": "A product designer on a live product monitors user behaviour through VOC listening and session replay analysis, runs A/B experiments on identified friction points, and feeds outcomes back into the project knowledge base to inform the next design cycle.",
+    "sequence": ["IMP-063", "IMP-066", "IMP-060", "VAL-036", "IMP-065"],
+    "stretch_flags": ["IMP-060 → VAL-036: A/B automation (Improve) followed by research bias audit (Validate) reverses typical phase order — defensible as a post-hoc quality check on experiment-derived conclusions"]
+  },
+  {
+    "path_id": "WF-010",
+    "label": "Longitudinal Qualitative Research Study",
+    "description": "A senior UX researcher runs a diary study combined with follow-up interviews to understand evolving user behaviour over time. The path covers planning, fieldwork design, quality screening, synthesis, cross-study meta-analysis, and stakeholder delivery.",
+    "sequence": ["EXP-002", "EXP-004", "EXP-005", "EXP-008", "EXP-009", "DEF-015", "DEF-010", "DEF-018", "DEF-016"],
+    "stretch_flags": ["DEF-018 → DEF-016: Cross-study meta-analysis feeds into session summarisation — a stretch; in practice these may run in parallel rather than sequentially"]
+  },
+  {
+    "path_id": "WF-011",
+    "label": "Designer-Led Code Contribution for Design Quality",
+    "description": "A product designer working in a mature design-to-code pipeline uses system-grounded drafting to generate compliant components, validates them with linting and visual regression testing, then contributes design-quality fixes directly to the production codebase using an AI IDE.",
+    "sequence": ["CON-028", "DEL-052", "VAL-034", "DEL-054", "DEL-058", "DEL-053"],
+    "stretch_flags": []
+  },
+  {
+    "path_id": "WF-012",
+    "label": "Scenario-Driven Concept Development with Early Testing",
+    "description": "A product designer uses narrative scenario generation to pressure-test a concept direction before committing to wireframes, then develops structured wireframes and a functional prototype, validates with simulated usability testing and attention analysis, and iterates before final handoff.",
+    "sequence": ["DEF-011", "CON-029", "CON-020", "CON-021", "VAL-038", "VAL-037", "VAL-042", "DEL-046"],
+    "stretch_flags": []
+  }
+]
