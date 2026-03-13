@@ -1,0 +1,152 @@
+{
+  "False Fidelity": {
+    "title": "False Fidelity",
+    "description": "AI produces output that appears correct, complete, and professional but contains errors, fabrications, or logical incoherence that are not immediately visible. The surface quality of the output actively disguises its deficiencies \u2014 the better AI gets at looking right, the harder these failures are to detect. This is not about obviously bad output; it is about output that passes casual review and fails under scrutiny.",
+    "observed_manifestations": [
+      "Hallucinated citations in legal research tools: Stanford research found Lexis+ AI produced incorrect information in 17% of queries; Westlaw's AI hallucinated in 34% of queries, leading to fabricated case citations entering court filings.",
+      "Fabricated references in medical literature: studies found 69% of references in ChatGPT's medical queries were false, and only 7% of AI-generated medical articles contained fully accurate references.",
+      "Semantic visual anomalies: forensic analysis of AI-generated images identified violations of commonsense physics \u2014 e.g., a climbing rope visible but not anchored to a rock face. Images are photorealistic but logically incoherent.",
+      "Authentication logic inversion: a senior architect discovered AI-written code had inverted a boolean check, giving deactivated accounts admin access. The module passed initial QA because the error was semantic, not syntactic.",
+      "AI-generated database queries that appeared correct but caused production meltdowns under real traffic, requiring a full week of debugging.",
+      "Design-to-code AI dropping UI elements, behaviors, and animations during handoff; developers reverting to manual builds.",
+      "AI hallucinations creating \"polished gibberish\" that takes longer to fix than doing the work manually.",
+      "System-level incoherence: individual AI-generated screens pass inspection but the collection lacks consistency \u2014 style drift across screens, missing contextual carry-forward, layout artefacts when elements are modified. GenUI study: participants reported AI tools failing to maintain connective tissue across screens despite explicit prompts to reference earlier designs. Each piece looks correct; the whole does not hold together. This extends False Fidelity beyond individual output errors to system-level quality."
+    ],
+    "design_transfer": [
+      "Research syntheses with fabricated themes or invented quotes",
+      "Competitive audits citing nonexistent studies",
+      "Wireframes with logical orphans \u2014 buttons without purpose, icons contradicting surrounding text",
+      "Accessibility recommendations based on hallucinated standards",
+      "Multi-screen compositions where each individual screen passes review but the collection is visually or architecturally incoherent"
+    ]
+  },
+  "Homogenization": {
+    "title": "Homogenization",
+    "description": "AI drives convergence toward statistically average outputs, eroding distinctiveness, brand identity, and design differentiation. Because generative models produce output based on the distribution of their training data, they gravitate toward the most common patterns. Over time, and especially when models begin training on AI-generated content, this creates a recursive flattening of visual and interaction diversity.",
+    "observed_manifestations": [
+      "\"Style collapse\" \u2014 artists warn that visual language is homogenizing as models train on similar data and on each other's outputs. Combined with \"impostor bias\" and \"automation bias\".",
+      "AI-generated designs described as \"usable but non-breakthrough\" \u2014 assembled from pre-trained data, lacking novel interactions or signifiers tailored to specific needs.",
+      "Survey of 149 design professionals: AI produces \"sterile\" and \"formulaic\" outputs that degrade emotional resonance despite efficiency gains.",
+      "Agency commoditization risk when AI is framed primarily as a speed tool rather than a quality tool \u2014 faster production that weakens strategic differentiation.",
+      "\"Recursive regression\" \u2014 AI training on AI-generated data compounds quality decay across generations, reducing the pool of genuinely original reference material.",
+      "AI tools homogenize products into \"best practice distillations,\" eroding unique human creativity and creating convergent, interchangeable outputs."
+    ],
+    "design_transfer": [
+      "Design systems that converge on identical patterns across competing products",
+      "Loss of brand-specific interaction signatures",
+      "Research insights that default to generic \"best practice\" rather than context-specific findings",
+      "The \"dribbblisation\" problem accelerated"
+    ]
+  },
+  "False Progress": {
+    "title": "False Progress",
+    "description": "AI creates the appearance of productive work, completed output, or organizational advancement when substantive quality, depth, or completeness is lacking. Speed feels like progress; volume feels like productivity. The gap between \"done\" and \"done well\" becomes invisible to anyone not deeply expert in the domain. This risk is particularly dangerous because it satisfies organizational metrics (output volume, cycle time) while undermining the metrics that matter (fitness for purpose, user value, design integrity).",
+    "observed_manifestations": [
+      "\"AI success theatre\" \u2014 teams perform AI adoption for leadership but quietly discard outputs; a performative cycle that wastes time rather than saving it.",
+      "Quality trust gap: 78% of respondents say AI enhances efficiency, but only 32% say they can rely on AI output in their work.",
+      "Only one-third of respondents proud of shipped AI-related features.",
+      "Duolingo team worked on eight generative-AI products that didn't land before the ninth showed promise \u2014 management underestimated the cost of trial-and-error.",
+      "The \"last 10% problem\" \u2014 AI solves the easy 80% quickly, creating false confidence that the hard 20% is also handled.",
+      "False economy: developers reported local time savings from AI that were absorbed by organizational friction; net productivity unchanged.",
+      "Non-designers producing superficial AI mockups that spark feature creep based on shallow feedback, bypassing research.",
+      "\"Good enough\" outputs from unskilled users flooding the design pipeline \u2014 \"no compile errors in design\" means flaws go unchecked.",
+      "\"Illusion of success\" \u2014 high-performing teams reduce effort because AI output looks sufficient",
+      "Premature fidelity: high-fidelity AI output signals \"done\" too early, constraining exploration before adequate design work has occurred. GenUI study participant: \"The high-fi generation pins me down with too much 'doneness' with a tendency to just use it as-is. It's hard to say to get rid of that and restart, showing me things too close to done too soon, influencing ability to branch out and explore.\" The mechanism is distinct from shallow depth \u2014 visual polish anchors teams to a first draft before adequate exploration has occurred."
+    ],
+    "design_transfer": [
+      "Research summaries that look thorough but miss critical nuance",
+      "Prototypes that demonstrate a concept but hide interaction problems",
+      "Design reviews that approve AI output because it looks polished",
+      "Stakeholder presentations built on shallow or fabricated evidence",
+      "High-fidelity AI-generated prototypes accepted as near-final before adequate design exploration has occurred"
+    ]
+  },
+  "Skill & Judgment Erosion": {
+    "title": "Skill & Judgment Erosion",
+    "description": "Sustained AI use degrades the practitioner's own capabilities \u2014 creative thinking, critical evaluation, domain knowledge, and troubleshooting skill. The mechanism is dependency: tasks that were previously learning opportunities become delegation opportunities, and the cognitive muscle that was built through practice atrophies. This affects both individual practitioners (who lose skills) and organizations (who lose the pipeline through which future experts develop).",
+    "observed_manifestations": [
+      "Designers report \"brain fog\" when ideating without AI after heavy use \u2014 creative process blanks when the scaffolding is removed.",
+      "Junior developers becoming \"prompt engineers\" without developing fundamental engineering skills. Senior engineers becoming \"code janitors\" cleaning AI messes rather than architecting systems. In a survey of 18 CTOs, 16 reported production disasters directly caused by un-reviewed AI code.",
+      "Overreliance on AI skips learning opportunities, turning designers into prompt operators who outsource critical thinking to biased LLMs.",
+      "Designers skipping user research in favor of AI summaries, building on generalized assumptions rather than real findings.",
+      "\"Automation bias\" \u2014 professionals begin trusting AI suggestions over their own judgment, eroding the evaluative capacity that distinguishes expertise from participation.",
+      "Talent pipeline erosion: a marketing director celebrates 40% productivity increase from AI content tools but has not hired a junior copywriter in two years. When AI takes routine entry-level tasks, organizations remove the developmental work through which juniors build judgment."
+    ],
+    "design_transfer": [
+      "Loss of ability to manually synthesize research",
+      "Degraded spatial reasoning for layout composition",
+      "Reduced capacity for edge-case thinking",
+      "Weakened ability to articulate design rationale without AI scaffolding",
+      "Thinning senior pipeline as juniors skip formative work"
+    ]
+  },
+  "Black Box Rationale": {
+    "title": "Black Box Rationale",
+    "description": "AI-assisted workflows lose the documented reasoning, decision traceability, and explainability that underpin professional design practice. The output exists; the reasoning doesn't. This is not about the output being wrong \u2014 it is about losing the *why* behind the output. When AI generates a solution, neither the AI nor the practitioner who accepted it may be able to explain the reasoning. Over time, this creates \"trust debt\" (analogous to technical debt) \u2014 a growing deficit of understanding that compounds until a decision is challenged, audited, or needs to be revised.",
+    "observed_manifestations": [
+      "Treating AI output as a \"black box\" \u2014 practitioners accept output without interrogating the reasoning, creating systemic vulnerabilities. The concept of \"trust debt\" describes how unexplained AI decisions accumulate risk over time.",
+      "Industrial designers report AI is \"incapable of understanding the 'why' of design work\" \u2014 it produces the what but not the rationale. A solar panel placed on a device that must be plugged into a wall; a screen in an unusable configuration. The output looks like a solution but is disconnected from the problem.",
+      "Without shared organizational memory, AI output quality varies by seniority and by who remembers what context to provide \u2014 junior staff are especially vulnerable.",
+      "AI fragments context across tools; people become the manual integration layer, losing continuity of reasoning across the design process.",
+      "Database deletion by Replit AI agent: when asked \"where's my data gone?\", the AI fabricated an explanation, requiring forensic investigation to identify what happened. The AI could not account for its own actions."
+    ],
+    "design_transfer": [
+      "Design decisions that can't be defended in review",
+      "Inability to onboard new team members to existing rationale",
+      "Compliance risk when design choices affecting accessibility or data handling lack documented justification",
+      "Design system decisions made by AI that nobody can explain or maintain"
+    ]
+  },
+  "Bias Transfer": {
+    "title": "Bias Transfer",
+    "description": "AI's embedded biases \u2014 originating in training data, model architecture, or prompt framing \u2014 flow into design decisions and outputs without detection. The mechanism is not that AI introduces *new* biases but that it systematically amplifies existing ones and scales them across every output. Individual outputs may not show obvious problems; the pattern emerges across many decisions over time and requires systematic auditing to detect.",
+    "observed_manifestations": [
+      "AI multiplies human biases via feedback loops; hidden errors scale fast in opaque models, evading detection until harm occurs at scale. behaviour by design)",
+      "Amazon's AI hiring tool was found to systematically discriminate against women because it was trained on historical hiring data that reflected existing gender bias \u2014 a canonical example of training data bias scaling through AI into organizational decisions.",
+      "\"Yes-man\" behavior: AI confirms the researcher's prompts rather than challenging assumptions, creating false consensus in research synthesis. When researchers ask leading questions, AI validates rather than pushes back.",
+      "Outsourcing customer understanding to LLMs risks building interfaces on the model's biases rather than actual user needs \u2014 LLMs produce \"best practice distillations\" that reflect dominant patterns in training data."
+    ],
+    "design_transfer": [
+      "Persona generation that reinforces demographic stereotypes",
+      "Research synthesis that amplifies majority voices and suppresses minority experiences",
+      "UI patterns that assume dominant-culture mental models",
+      "Accessibility recommendations that reflect training data biases rather than actual user needs"
+    ]
+  },
+  "Feasibility Blindness": {
+    "title": "Feasibility Blindness",
+    "description": "AI generates designs that cannot be built, cannot be built at scale, or cannot be built within the constraints of the target platform, technology stack, or budget. The prototype looks right in the design tool; the constraints only become visible when engineering attempts implementation \u2014 by which time stakeholder expectations are set and the team faces a costly renegotiation.",
+    "observed_manifestations": [
+      "Manufacturing infeasibility in industrial design: AI generates organic, complex geometries that cannot be injection-molded, 3D printed at scale, or CNC machined within budget. Designers must completely rebuild from scratch.",
+      "Ergonomic neglect: AI prioritizes visual appeal over physical usability. Power tool buttons placed where users cannot reach them while maintaining a secure grip.",
+      "Design-to-code outputs requiring full rewrites because AI-generated code drops elements, overrides developer preferences, and produces unoptimized implementations.",
+      "AI exposes sloppy design systems \u2014 detached components or missing tokens cause AI tools to fail, revealing structural shortcuts that manual processes had hidden."
+    ],
+    "design_transfer": [
+      "Complex micro-interactions that can't run at 60fps",
+      "Layouts that break on real device sizes",
+      "Design system components that don't compose well",
+      "Data visualizations requiring backend infrastructure the team doesn't have",
+      "Glass-morphism and complex animation effects that are technically impossible without massive performance degradation"
+    ]
+  },
+  "Empathy Gap": {
+    "title": "Empathy Gap",
+    "description": "AI outputs lack understanding of human emotional context, cultural nuance, institutional constraints, and the messy realities of actual user situations. This is not a bug that gets fixed with better models \u2014 it is a structural limitation of systems that produce output based on statistical patterns rather than lived experience. The risk is sharpest in use cases that depend on understanding *why* people feel and behave the way they do, not just *what* they do.",
+    "observed_manifestations": [
+      "AI produces designs without UX empathy \u2014 can't \"think like users\" or grasp emotional intentions. Outputs feel sterile despite visual appeal.",
+      "Professional designers struggle with AI image tools because text prompts can't capture nuanced human experiences, emotions, or stories essential for compelling design. The rigid input system frustrates visual thinkers and disrupts iterative workflows.",
+      "Coca-Cola #MakeItHappy campaign: automated bot converted negative tweets into cheerful ASCII art, including content from Mein Kampf, because the system had no cultural or ethical context. Campaign axed after PR disaster.",
+      "Toys \"R\" Us Sora ad: AI-generated nostalgia video intended to evoke warmth. Character facial features fluctuated throughout; viewers described it as \"soulless,\" \"creepy,\" and \"unnatural.\"",
+      "AI-generated user flows that ignore institutional constraints, messy real-world workflows, and regulatory compliance needs. The \"experienced\" designer knows the detail is the solution; the AI knows only the pattern.",
+      "Voice assistant \"butterfly effects\" \u2014 ambiguous prompts like \"turn it up\" interpreted without situational context, causing cascading misinterpretation."
+    ],
+    "design_transfer": [
+      "Onboarding flows that don't account for user anxiety",
+      "Error states that feel robotic",
+      "Research synthesis that loses the emotional texture of user stories",
+      "Localization that misses cultural expectations",
+      "Service design that ignores the institutional reality of frontline workers"
+    ]
+  }
+}

@@ -5,24 +5,24 @@
       "provenance": "Converges across Lean SQDC, SPACE, DORA, McKinsey, Deloitte, Accenture, Gartner, DesignOps, Val IT, and Balanced Scorecard frameworks."
     },
     "Velocity": {
-      "definition": "Compresses cycle time — the same work delivered sooner. Distinct from Efficiency: velocity shortens timelines, efficiency reduces resource expenditure; both may co-occur but imply different business cases.",
+      "definition": "Compresses cycle time \u2014 the same work delivered sooner. Distinct from Efficiency: velocity shortens timelines, efficiency reduces resource expenditure; both may co-occur but imply different business cases.",
       "provenance": "Converges across DORA (Lead Time/Speed), DX Core 4 (Speed), Accenture (Acceleration Value), Lean SQDC (Delivery), Bain, and McGrath."
     },
     "Quality": {
-      "definition": "Improves the standard of output — accuracy, consistency, coherence, and fitness for purpose. Encompasses both measurable quality (error rates, compliance pass rates) and assessed quality (design critique, brand coherence).",
+      "definition": "Improves the standard of output \u2014 accuracy, consistency, coherence, and fitness for purpose. Encompasses both measurable quality (error rates, compliance pass rates) and assessed quality (design critique, brand coherence).",
       "provenance": "Converges across Lean SQDC, DX Core 4, DesignOps, Deloitte, Gartner, DMI, and Borja de Mozota."
     },
     "Insight": {
-      "definition": "Generates new knowledge, surfaces patterns, or enables better-informed decisions. The output is understanding, not an artifact — distinguished from Learning by its subject-matter orientation rather than capacity-building.",
-      "provenance": "Draws on Google ML (Insight Generation), Balanced Scorecard (Learning — partial), Davenport & Prusak, Innovation Value Chain, and Microsoft (Decision Intelligence)."
+      "definition": "Generates new knowledge, surfaces patterns, or enables better-informed decisions. The output is understanding, not an artifact \u2014 distinguished from Learning by its subject-matter orientation rather than capacity-building.",
+      "provenance": "Draws on Google ML (Insight Generation), Balanced Scorecard (Learning \u2014 partial), Davenport & Prusak, Innovation Value Chain, and Microsoft (Decision Intelligence)."
     },
     "Innovation": {
-      "definition": "Enables work that wasn't feasible before — new methods, new scales, new possibilities. Distinct from Efficiency (same work, less spent) and Velocity (same work, sooner) by the creation of genuinely new capability.",
+      "definition": "Enables work that wasn't feasible before \u2014 new methods, new scales, new possibilities. Distinct from Efficiency (same work, less spent) and Velocity (same work, sooner) by the creation of genuinely new capability.",
       "provenance": "Converges across Deloitte (Capability Expansion), Accenture, DMI, Verganti, Amit & Zott, Gartner Defend-Extend-Upend (Upend), and McFarlan."
     },
     "Risk Reduction": {
       "definition": "Reduces errors, compliance exposure, quality failures, or ethical risk. Includes both direct risk mitigation (fewer defects, accessibility compliance) and systemic risk reduction (governance scaffolding, audit trails).",
-      "provenance": "Converges across Val IT, McKinsey, Lean SQDC (Safety), Gartner Defend-Extend-Upend (Defend), and Balanced Scorecard (Internal Process — partial)."
+      "provenance": "Converges across Val IT, McKinsey, Lean SQDC (Safety), Gartner Defend-Extend-Upend (Defend), and Balanced Scorecard (Internal Process \u2014 partial)."
     },
     "Learning": {
       "definition": "Builds skills, workflow literacy, organizational knowledge, or reusable knowledge assets. Distinguished from Insight by its focus on building the capacity of people and teams rather than producing subject-matter understanding.",
@@ -43,15 +43,15 @@
       "provenance": "Documented across Figma 2025 AI Report (78%/32% efficiency-vs-trust split), GenUI study (premature fidelity mechanism), Atlassian, Duolingo case study, and engineering design research (Zhang et al. 2021, n=72)."
     },
     "Skill & Judgment Erosion": {
-      "definition": "Sustained AI use degrades practitioner capabilities — creative thinking, critical evaluation, domain knowledge, and troubleshooting skill. The mechanism is dependency: tasks that were learning opportunities become delegation opportunities.",
+      "definition": "Sustained AI use degrades practitioner capabilities \u2014 creative thinking, critical evaluation, domain knowledge, and troubleshooting skill. The mechanism is dependency: tasks that were learning opportunities become delegation opportunities.",
       "provenance": "Documented across designer 'brain fog' reports (Reddit), CTO survey on production disasters (n=18), Gothelf, Wharton talent pipeline research, and automation bias studies."
     },
     "Black Box Rationale": {
-      "definition": "AI-assisted workflows lose the documented reasoning, decision traceability, and explainability that underpin professional design practice. The output exists; the 'why' behind it does not — creating 'trust debt' that compounds over time.",
+      "definition": "AI-assisted workflows lose the documented reasoning, decision traceability, and explainability that underpin professional design practice. The output exists; the 'why' behind it does not \u2014 creating 'trust debt' that compounds over time.",
       "provenance": "Documented through practitioner reports (NNg/Laura Klein), Replit database deletion case, industrial design research, and AI governance literature on decision traceability."
     },
     "Bias Transfer": {
-      "definition": "AI's embedded biases — originating in training data, model architecture, or prompt framing — flow into design decisions and outputs without detection. The risk is not new bias but systematic amplification of existing bias at scale.",
+      "definition": "AI's embedded biases \u2014 originating in training data, model architecture, or prompt framing \u2014 flow into design decisions and outputs without detection. The risk is not new bias but systematic amplification of existing bias at scale.",
       "provenance": "Documented via Amazon hiring tool case, 'yes-man' validation behavior in research contexts, UX Collective, Gothelf, and bias feedback loop literature."
     },
     "Feasibility Blindness": {
@@ -65,108 +65,144 @@
   },
   "expertise_types": {
     "Information architecture": {
-      "definition": "The expertise that structures, organizes, and hierarchically composes content, navigation, and data to make systems understandable. Separates outputs where structure holds up from those that are visually organized but logically incoherent.",
-      "provenance": "Role-agnostic by design — any practitioner may hold IA expertise; the field encodes quality ceiling, not role assignment (Field B rationale, v1.2)."
+      "definition": "Expertise that structures and hierarchically organizes content, navigation, and data to make systems understandable. Separates outputs where structure holds up from those that are visually organized but logically incoherent.",
+      "provenance": "Role-agnostic by design \u2014 any practitioner may hold IA expertise; the field encodes quality ceiling, not role assignment (Field B rationale, v1.2)."
     },
     "Creative direction": {
-      "definition": "The expertise that governs typography, brand expression, aesthetic coherence, and form in service of meaning. Separates outputs with distinctive visual identity from those that are technically correct but undifferentiated.",
+      "definition": "Expertise that marshals typography, brand expression, aesthetic coherence, and form in service of meaning. Separates outputs with distinctive visual identity from those that are technically correct but undifferentiated.",
       "provenance": "Renamed from 'Artistic direction' in v1.2 during catalog build review to better reflect the evaluative and directional nature of the expertise."
     },
     "Interaction design": {
-      "definition": "The expertise that governs mental models, user flows, error states, edge cases, and progressive disclosure. Separates outputs that work for real users in real contexts from those that demonstrate a concept but hide interaction problems.",
+      "definition": "Expertise that anticipates mental models, user flows, error states, edge cases, and progressive disclosure. Separates outputs that work for real users in real contexts from those that demonstrate a concept but hide interaction problems.",
       "provenance": "Phase 1 evidence establishes this as a consistent differentiator between AI-adequate and expert-level interactive output (Field B v1.2 rationale)."
     },
     "Research and insight": {
-      "definition": "The expertise that governs study design, bias control, synthesis rigor, and insight extraction. Separates findings that are analytically valid from those that are plausible-sounding but methodologically compromised.",
+      "definition": "Expertise that oversees study design, bias control, synthesis rigor, and insight extraction. Separates findings that are analytically valid from those that are plausible-sounding but methodologically compromised.",
       "provenance": "Renamed from 'Research methodology' in v1.1 to align with UC Template v1.0 field naming."
     },
     "Content strategy": {
-      "definition": "The expertise that governs tone, clarity, narrative structure, microcopy, and voice. Separates content that communicates with purpose and precision from that which is grammatically correct but strategically empty.",
+      "definition": "Expertise that crafts tone, clarity, narrative structure, microcopy, and voice. Separates content that communicates with purpose and precision from that which is grammatically correct but strategically empty.",
       "provenance": "Decoupled from Creative direction to reflect the distinct evaluative discipline of language and communication strategy (Field B v1.2)."
     },
     "Design system logic": {
-      "definition": "The expertise that governs component architecture, token systems, constraint propagation, and scalability. Separates systems that hold together at scale from those that work for one screen but break as complexity grows.",
-      "provenance": "Identified as a distinct expertise type through catalog build — design system work at scale requires architectural reasoning not reducible to aesthetic or IA expertise."
+      "definition": "Expertise that governs component architecture, token systems, constraint propagation, and scalability. Separates systems that hold together at scale from those that work for one screen but break as complexity grows.",
+      "provenance": "Identified as a distinct expertise type through catalog build \u2014 design system work at scale requires architectural reasoning not reducible to aesthetic or IA expertise."
     },
     "Business framing": {
-      "definition": "The expertise that governs value articulation, stakeholder alignment, and prioritization rationale. Separates decisions that are strategically defensible from those that are well-designed but disconnected from business context.",
-      "provenance": "Role-agnostic by design — a designer, PM, or researcher may hold business framing expertise; AI compression of role boundaries makes expertise-level framing increasingly the differentiator (Field B v1.2)."
+      "definition": "Expertise that anchors value articulation, stakeholder alignment, and prioritization rationale. Separates decisions that are strategically defensible from those that are well-designed but disconnected from business context.",
+      "provenance": "Role-agnostic by design \u2014 a designer, PM, or researcher may hold business framing expertise; AI compression of role boundaries makes expertise-level framing increasingly the differentiator (Field B v1.2)."
     },
     "Technical feasibility": {
-      "definition": "The expertise that governs implementation constraints, performance implications, and data architecture. Separates designs that can be built within real-world constraints from those that look right in the design tool but fail in engineering.",
-      "provenance": "Responds directly to the Feasibility Blindness risk — paired with that risk type in use cases where AI-generated proposals bypass technical constraint awareness."
+      "definition": "Expertise that enforces implementation constraints, performance implications, and data architecture. Separates designs that can be built within real-world constraints from those that look right in the design tool but fail in engineering.",
+      "provenance": "Responds directly to the Feasibility Blindness risk \u2014 paired with that risk type in use cases where AI-generated proposals bypass technical constraint awareness."
     },
     "Behavioral reasoning": {
-      "definition": "The expertise that governs user psychology, motivation patterns, adoption barriers, and habit formation. Separates outputs designed for how users actually behave from those designed for how they say they behave.",
+      "definition": "Expertise that reads user psychology, motivation patterns, adoption barriers, and habit formation. Separates outputs designed for how users actually behave from those designed for how they say they behave.",
       "provenance": "Distinct from Research and insight by its focus on causal psychological mechanisms rather than study design and synthesis methodology."
     },
     "Data and analytics": {
-      "definition": "The expertise that governs quantitative reasoning, metric interpretation, A/B test design, and performance measurement. Separates analytically sound decisions from those that appear data-driven but rest on misread signals.",
+      "definition": "Expertise that interrogates quantitative reasoning, metric interpretation, A/B test design, and performance measurement. Separates analytically sound decisions from those that appear data-driven but rest on misread signals.",
       "provenance": "Included to support Improve-phase use cases where AI-assisted analysis requires expert interpretation rather than just tool operation."
     },
     "Ethical assessment": {
-      "definition": "The expertise that governs bias detection, fairness evaluation, privacy implications, and trust calibration. Separates outputs that have been evaluated against ethical criteria from those that have been visually or functionally reviewed but not ethically scrutinized.",
+      "definition": "Expertise that scrutinizes bias, fairness, privacy implications, and trust calibration. Separates outputs that have been evaluated against ethical criteria from those that have been visually or functionally reviewed but not ethically scrutinized.",
       "provenance": "Responds to the Bias Transfer and Empathy Gap risk types; represents the evaluative capacity that must remain human-held even as AI assists in flagging issues."
     }
   },
   "attestation_levels": {
     "Speculative": {
-      "definition": "Theoretically plausible but not yet practiced in design contexts. The innovation has not reached even innovators — it exists as a concept or adjacent-field capability but has no documented design workflow application.",
-      "provenance": "Adapted from Rogers' Diffusion of Innovations model (Innovators threshold — pre-adoption); maps to the pre-diffusion state before any documented practitioner uptake."
+      "definition": "Theoretically plausible but not yet practiced in design contexts. The innovation has not reached even innovators \u2014 it exists as a concept or adjacent-field capability but has no documented design workflow application.",
+      "provenance": "Adapted from Rogers' Diffusion of Innovations model (Innovators threshold \u2014 pre-adoption); maps to the pre-diffusion state before any documented practitioner uptake."
     },
     "Emerging": {
-      "definition": "Isolated experiments by innovators and early adopters, with no repeatable workflow. Adoption is individual, exploratory, and often undisclosed — the practice exists but is not yet transferable or systematized.",
+      "definition": "Isolated experiments by innovators and early adopters, with no repeatable workflow. Adoption is individual, exploratory, and often undisclosed \u2014 the practice exists but is not yet transferable or systematized.",
       "provenance": "Adapted from Rogers (Innovators/Early Adopters stage); corresponds to the HITL governance tier where individual practitioners experiment outside formal process."
     },
     "Developing": {
-      "definition": "Crossing the chasm into early majority: multiple teams reporting use, patterns forming, and tools recognized — but practice depends on local champions rather than systemic organizational support.",
-      "provenance": "Adapted from Rogers (Early Majority / chasm-crossing stage); most current DwAI catalog use cases sit here, reflecting the 2025–2026 state of AI-assisted design practice."
+      "definition": "Crossing the chasm into early majority: multiple teams reporting use, patterns forming, and tools recognized \u2014 but practice depends on local champions rather than systemic organizational support.",
+      "provenance": "Adapted from Rogers (Early Majority / chasm-crossing stage); most current DwAI catalog use cases sit here, reflecting the 2025\u20132026 state of AI-assisted design practice."
     },
     "Established": {
-      "definition": "Mainstream practice with organizational infrastructure: documented workflows, repeatable outcomes, tooling and governance in place. Practice does not depend on individual champions — it is embedded in process.",
+      "definition": "Mainstream practice with organizational infrastructure: documented workflows, repeatable outcomes, tooling and governance in place. Practice does not depend on individual champions \u2014 it is embedded in process.",
       "provenance": "Adapted from Rogers (Late Majority territory); corresponds to HOTL/HOOTL governance tiers where AI operates within defined organizational parameters."
     }
   },
   "attestation_diagnostics": {
     "Tool gap": {
-      "definition": "Models or tools are not yet capable enough to support the use case reliably — the constraint is AI capability, not workflow or adoption."
+      "definition": "Models or tools are not yet capable enough to support the use case reliably \u2014 the constraint is AI capability, not workflow or adoption."
     },
     "Workflow gap": {
-      "definition": "Tools exist and are capable, but integration into formal design workflows is undeveloped or ad hoc — the constraint is process maturity, not technology."
+      "definition": "Tools exist and are capable, but integration into formal design workflows is undeveloped or ad hoc \u2014 the constraint is process maturity, not technology."
     },
     "Adoption gap": {
-      "definition": "Both capability and workflow exist, but organizational uptake remains low — the constraint is change management, awareness, or incentive alignment."
+      "definition": "Both capability and workflow exist, but organizational uptake remains low \u2014 the constraint is change management, awareness, or incentive alignment."
     },
     "Trust gap": {
-      "definition": "Practitioners won't delegate to AI due to perceived stakes, past experience with failure, or professional risk aversion — the constraint is confidence and accountability culture."
+      "definition": "Practitioners won't delegate to AI due to perceived stakes, past experience with failure, or professional risk aversion \u2014 the constraint is confidence and accountability culture."
     },
     "Regulatory gap": {
-      "definition": "Policy, compliance, or governance constraints block or slow adoption — the constraint is institutional and legal context rather than capability or workflow. (Provisional tag.)"
+      "definition": "Policy, compliance, or governance constraints block or slow adoption \u2014 the constraint is institutional and legal context rather than capability or workflow. (Provisional tag.)"
     },
     "N/A": {
-      "definition": "Used for Established-level use cases where the diagnostic question does not apply — the practice is already embedded and the gap framing is no longer relevant."
+      "definition": "Used for Established-level use cases where the diagnostic question does not apply \u2014 the practice is already embedded and the gap framing is no longer relevant."
     }
   },
   "arrangement_levels": {
     "Director": {
-      "definition": "Human drives; AI executes on instruction. The human produces the primary output and holds full creative and decisional authority — AI performs bounded subtasks such as generating options, fetching data, or formatting.",
-      "provenance": "Primary structure from Feng, McDonald & Zhang 'Levels of Autonomy for AI Agents' (Columbia, 2025); cognitive framing from Parasuraman, Sheridan & Wickens (2000); maps to HITL in the governance taxonomy."
+      "level": 1,
+      "role": "Director",
+      "initiative": "Human drives; AI executes on instruction",
+      "human_function": "Create, compose, decide, structure. Human produces the primary output; AI performs bounded subtasks (generate options, fetch data, format). Human holds full creative and decisional authority."
     },
     "Co-creator": {
-      "definition": "Shared, alternating initiative between human and AI. Both contribute substantive output in an iterative cycle — the human steers direction, selects from AI contributions, and integrates into a coherent whole; neither party's output is final without the other's.",
-      "provenance": "Co-creativity framing from Rezwana & Maher (2022/2023); maps to HITL; authority/control logic from Boos, Rush & Bernstein (2024)."
+      "level": 2,
+      "role": "Co-creator",
+      "initiative": "Shared; alternating initiative",
+      "human_function": "Co-generate, select, synthesize, reframe. Human and AI both contribute substantive output in an iterative cycle. Human steers direction, selects from AI contributions, and integrates into a coherent whole. Neither party's output is final without the other's."
     },
     "Challenger": {
-      "definition": "AI proposes; human decides at checkpoints. AI produces a substantive draft or recommendation; the human interrogates it, tests it against criteria, and accepts, modifies, or redirects — the human's task is judgment, not production.",
-      "provenance": "Sits at the HITL/HOTL boundary in the governance crosswalk; primary structure from Feng et al. (2025); distinguished from Approver by depth of engagement rather than inspection against fixed criteria."
+      "level": 3,
+      "role": "Challenger",
+      "initiative": "AI proposes; human decides at checkpoints",
+      "human_function": "Evaluate, challenge, redirect, accept. AI produces a substantive draft or recommendation; human interrogates it, tests it against criteria, and either accepts, modifies, or sends it back. Human's task is judgment, not production."
     },
     "Approver": {
-      "definition": "AI executes; human gates output. AI produces a near-complete output autonomously; the human inspects against predefined standards (brand, accuracy, compliance, quality) and passes or blocks — the human's task is quality assurance, not direction-setting.",
-      "provenance": "Maps to HOTL in the governance taxonomy; primary structure from Feng et al. (2025); governance crosswalk to EU AI Act oversight requirements documented in Field A v1.2."
+      "level": 4,
+      "role": "Approver",
+      "initiative": "AI executes; human gates output",
+      "human_function": "Review, verify, approve, reject. AI produces a near-complete output autonomously; human inspects against standards (brand, accuracy, compliance, quality) and passes or blocks. Human's task is quality assurance, not direction-setting."
     },
     "Auditor": {
-      "definition": "AI operates autonomously; human monitors. AI runs within defined parameters — the human checks outcomes periodically or is alerted on anomaly, intervening on exception rather than engaging with individual outputs.",
-      "provenance": "Maps to the HOTL/HOOTL boundary; primary structure from Feng et al. (2025); included for forward compatibility — few current use cases reach this level, representing a future-state design automation mode."
+      "level": 5,
+      "role": "Auditor",
+      "initiative": "AI operates autonomously; human monitors",
+      "human_function": "Monitor, spot-check, intervene on exception, audit. AI runs within defined parameters; human checks outcomes periodically or is alerted on anomaly. Human's task is oversight, not engagement with individual outputs."
+    }
+  },
+  "phases": {
+    "Explore": {
+      "definition": "Understanding the problem space \u2014 research, discovery, competitive landscape analysis, and domain fluency. The practitioner is in listening mode: gathering signals, surfacing what is known and unknown before framing begins.",
+      "provenance": "Maps to multiple recognised process models: Double Diamond (Discover), Design Thinking (Empathize), Lean Startup (Problem/Solution Fit), Teresa Torres' Continuous Discovery, and the divergent opening stage of most structured design methodologies."
+    },
+    "Define": {
+      "definition": "Synthesis, framing, and strategy \u2014 translating raw research into structured insight, problem statements, personas, briefs, and knowledge artifacts. The practitioner moves from data to meaning and from meaning to direction.",
+      "provenance": "Maps to Double Diamond (Define), Design Thinking (Define), Systems Thinking (problem framing), and the convergent phase of most structured methodologies. Also aligned with Kolb's learning cycle (Abstract Conceptualisation stage)."
+    },
+    "Concept": {
+      "definition": "Ideation, wireframing, prototyping, and early visual exploration \u2014 generating and evaluating potential solutions before committing to a direction. The practitioner is in generative mode: expanding the solution space before narrowing it.",
+      "provenance": "Maps to Double Diamond (Develop), Design Thinking (Ideate and Prototype), and the generative phase of IDEO Human-Centered Design. Also aligned with SCAMPER, Crazy Eights, and structured ideation methodologies."
+    },
+    "Validate": {
+      "definition": "Testing, evaluation, auditing, and quality assurance \u2014 stress-testing proposed solutions against real user behaviour, technical constraints, and quality standards before committing to delivery.",
+      "provenance": "Maps to Design Thinking (Test), Lean Startup (Build-Measure-Learn \u2014 Measure stage), and Double Diamond (Deliver \u2014 early stage). Also aligned with DORA change failure rate metrics and ISO usability evaluation standards."
+    },
+    "Deliver": {
+      "definition": "Specifications, asset production, handoff, documentation, and code contribution \u2014 translating validated designs into production-ready artifacts for engineering and stakeholder consumption.",
+      "provenance": "Maps to Design Sprint (output/handoff stage), Agile (Definition of Done), and the production stage of most product development frameworks. Also aligned with DORA deployment frequency metrics and DesignOps delivery infrastructure."
+    },
+    "Improve": {
+      "definition": "Analytics, A/B testing, monitoring, and iteration \u2014 using live product signals to identify friction, run experiments, and feed learning back into the next design cycle. The practitioner is in evaluation and optimisation mode on a shipped product.",
+      "provenance": "Maps to Lean Startup (Build-Measure-Learn \u2014 Learn stage), Continuous Discovery (opportunity identification post-launch), PDCA (Act and Plan stages), and DORA (change lead time and recovery metrics)."
     }
   }
 }

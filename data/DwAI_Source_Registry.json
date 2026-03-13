@@ -1,0 +1,655 @@
+[
+  {
+    "id": "SR-001",
+    "name": "Noltenius",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "CON-020",
+      "CON-021",
+      "CON-022",
+      "CON-023",
+      "CON-026",
+      "CON-027",
+      "CON-028",
+      "CON-029",
+      "CON-030",
+      "CON-031",
+      "EXP-002",
+      "EXP-003"
+    ],
+    "citation_count": 12
+  },
+  {
+    "id": "SR-002",
+    "name": "Maxime",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "CON-028",
+      "CON-029",
+      "CON-030",
+      "CON-031",
+      "DEL-047",
+      "DEL-048",
+      "DEL-052",
+      "DEL-053",
+      "DEL-055",
+      "DEL-072"
+    ],
+    "citation_count": 10
+  },
+  {
+    "id": "SR-003",
+    "name": "Cattapan (Shopify)",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "CON-019",
+      "CON-020",
+      "CON-021",
+      "CON-022",
+      "CON-023",
+      "CON-026",
+      "EXP-001"
+    ],
+    "citation_count": 7,
+    "merge_note": "Merged from: Cattapan and Cattapan (Shopify) \u2014 same person"
+  },
+  {
+    "id": "SR-004",
+    "name": "Morales Achiardi",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "DEL-047",
+      "DEL-048",
+      "DEL-049",
+      "DEL-050",
+      "DEL-054",
+      "DEL-055",
+      "DEL-056"
+    ],
+    "citation_count": 7
+  },
+  {
+    "id": "SR-005",
+    "name": "Wen (Anthropic)",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "CON-019",
+      "CON-021",
+      "CON-022",
+      "CON-028",
+      "CON-030",
+      "DEL-052",
+      "DEL-053"
+    ],
+    "citation_count": 7
+  },
+  {
+    "id": "SR-006",
+    "name": "Muehlhaus",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "CON-019",
+      "CON-026",
+      "CON-027",
+      "DEF-012",
+      "DEF-013",
+      "DEF-014"
+    ],
+    "citation_count": 6
+  },
+  {
+    "id": "SR-007",
+    "name": "NNg Tools survey",
+    "type": "Industry Research",
+    "cited_by": [
+      "CON-020",
+      "CON-026",
+      "CON-027",
+      "CON-028",
+      "CON-029",
+      "CON-031"
+    ],
+    "citation_count": 6,
+    "merge_note": "Merged from: NNg Tools and NNg Tools survey \u2014 same survey"
+  },
+  {
+    "id": "SR-008",
+    "name": "Newman",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "CON-020",
+      "CON-022",
+      "CON-029",
+      "CON-030",
+      "CON-031",
+      "VAL-036"
+    ],
+    "citation_count": 6
+  },
+  {
+    "id": "SR-009",
+    "name": "Orego (4/5)",
+    "type": "Academic/Institutional",
+    "cited_by": [
+      "DEF-010",
+      "DEF-015",
+      "DEF-016",
+      "VAL-032",
+      "VAL-033",
+      "VAL-036"
+    ],
+    "citation_count": 6
+  },
+  {
+    "id": "SR-010",
+    "name": "Chawla",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "CON-021",
+      "CON-026",
+      "CON-028",
+      "CON-029",
+      "CON-031"
+    ],
+    "citation_count": 5,
+    "merge_note": "Merged from: Chawla, Chawla (Atlassian), Chawla (Tesco) \u2014 same practitioner"
+  },
+  {
+    "id": "SR-011",
+    "name": "GenUI study (Chen/Knearem/Li, arXiv 2025)",
+    "type": "Academic/Institutional",
+    "cited_by": [
+      "CON-019",
+      "CON-020",
+      "CON-073",
+      "CON-074",
+      "DEL-072"
+    ],
+    "citation_count": 5,
+    "merge_note": "Merged from: GenUI study, GenUI study (Chen/Knearem/Li, arXiv 2025), and GenUI study (UXD2) \u2014 same study"
+  },
+  {
+    "id": "SR-012",
+    "name": "Orego (1/5)",
+    "type": "Academic/Institutional",
+    "cited_by": [
+      "DEF-012",
+      "EXP-002",
+      "EXP-003",
+      "EXP-004",
+      "EXP-005"
+    ],
+    "citation_count": 5
+  },
+  {
+    "id": "SR-013",
+    "name": "Orego (3/5)",
+    "type": "Academic/Institutional",
+    "cited_by": [
+      "CON-021",
+      "CON-025",
+      "EXP-007",
+      "EXP-008",
+      "EXP-009"
+    ],
+    "citation_count": 5
+  },
+  {
+    "id": "SR-014",
+    "name": "Maleki (Microsoft)",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "DEF-010",
+      "DEF-014",
+      "DEF-016",
+      "EXP-004"
+    ],
+    "citation_count": 4
+  },
+  {
+    "id": "SR-015",
+    "name": "Maze",
+    "type": "Industry Research",
+    "cited_by": [
+      "DEF-016",
+      "VAL-032",
+      "VAL-033",
+      "VAL-039"
+    ],
+    "citation_count": 4
+  },
+  {
+    "id": "SR-016",
+    "name": "Orego",
+    "type": "Academic/Institutional",
+    "cited_by": [
+      "DEL-047",
+      "IMP-059",
+      "IMP-062",
+      "IMP-063"
+    ],
+    "citation_count": 4
+  },
+  {
+    "id": "SR-017",
+    "name": "Orego (2/5)",
+    "type": "Academic/Institutional",
+    "cited_by": [
+      "EXP-002",
+      "EXP-003",
+      "EXP-004",
+      "EXP-005"
+    ],
+    "citation_count": 4
+  },
+  {
+    "id": "SR-018",
+    "name": "Supernova",
+    "type": "Industry Research",
+    "cited_by": [
+      "DEL-047",
+      "DEL-048",
+      "DEL-054",
+      "DEL-055"
+    ],
+    "citation_count": 4
+  },
+  {
+    "id": "SR-019",
+    "name": "Fanny",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "CON-019",
+      "CON-022",
+      "VAL-032"
+    ],
+    "citation_count": 3
+  },
+  {
+    "id": "SR-020",
+    "name": "Figma (7 UCs)",
+    "type": "Industry Research",
+    "cited_by": [
+      "CON-020",
+      "DEF-012",
+      "DEF-013"
+    ],
+    "citation_count": 3,
+    "merge_note": "Merged from: Figma (7 UCs) and Figma 7 UCs \u2014 same reference"
+  },
+  {
+    "id": "SR-021",
+    "name": "Lykoudi",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "DEL-044",
+      "DEL-045",
+      "DEL-046"
+    ],
+    "citation_count": 3
+  },
+  {
+    "id": "SR-022",
+    "name": "Schenk",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "DEF-016",
+      "VAL-032",
+      "VAL-033"
+    ],
+    "citation_count": 3
+  },
+  {
+    "id": "SR-023",
+    "name": "Atlassian",
+    "type": "Industry Research",
+    "cited_by": [
+      "EXP-004",
+      "IMP-060"
+    ],
+    "citation_count": 2,
+    "merge_note": "Merged from: Atlassian (Healey/Hall) and Atlassian (Sonnino) \u2014 same institutional source"
+  },
+  {
+    "id": "SR-024",
+    "name": "Batchu",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "CON-021",
+      "CON-073"
+    ],
+    "citation_count": 2
+  },
+  {
+    "id": "SR-025",
+    "name": "Gemini synthesis",
+    "type": "Industry Research",
+    "cited_by": [
+      "DEL-050",
+      "DEL-051"
+    ],
+    "citation_count": 2
+  },
+  {
+    "id": "SR-026",
+    "name": "Geoco",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "DEL-050",
+      "DEL-051"
+    ],
+    "citation_count": 2
+  },
+  {
+    "id": "SR-027",
+    "name": "Huba",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "CON-028",
+      "DEL-052"
+    ],
+    "citation_count": 2
+  },
+  {
+    "id": "SR-028",
+    "name": "Li et al.",
+    "type": "Academic/Institutional",
+    "cited_by": [
+      "CON-021",
+      "CON-073"
+    ],
+    "citation_count": 2
+  },
+  {
+    "id": "SR-029",
+    "name": "Nishat",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "DEF-010",
+      "DEF-015"
+    ],
+    "citation_count": 2
+  },
+  {
+    "id": "SR-030",
+    "name": "Parallel HQ",
+    "type": "Industry Research",
+    "cited_by": [
+      "DEL-050",
+      "DEL-051"
+    ],
+    "citation_count": 2
+  },
+  {
+    "id": "SR-031",
+    "name": "UXArmy",
+    "type": "Industry Research",
+    "cited_by": [
+      "EXP-007",
+      "VAL-032"
+    ],
+    "citation_count": 2
+  },
+  {
+    "id": "SR-032",
+    "name": "UserTesting for Figma",
+    "type": "Industry Research",
+    "cited_by": [
+      "VAL-032",
+      "VAL-040"
+    ],
+    "citation_count": 2
+  },
+  {
+    "id": "SR-033",
+    "name": "Amplitude (Clarke)",
+    "type": "Industry Research",
+    "cited_by": [
+      "IMP-066"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-034",
+    "name": "Applitools",
+    "type": "Industry Research",
+    "cited_by": [
+      "VAL-034"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-035",
+    "name": "Babich",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "CON-026"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-036",
+    "name": "Borg et al.",
+    "type": "Academic/Institutional",
+    "cited_by": [
+      "CON-021"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-037",
+    "name": "CAILA",
+    "type": "Academic/Institutional",
+    "cited_by": [
+      "DEF-010"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-038",
+    "name": "Candello et al.",
+    "type": "Academic/Institutional",
+    "cited_by": [
+      "DEF-010"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-039",
+    "name": "Chen et al. (CritiqueCrew, CHI 2026)",
+    "type": "Academic/Institutional",
+    "cited_by": [
+      "VAL-035"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-040",
+    "name": "EvAlignUX",
+    "type": "Industry Research",
+    "cited_by": [
+      "VAL-040"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-041",
+    "name": "Evinced",
+    "type": "Industry Research",
+    "cited_by": [
+      "VAL-041"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-042",
+    "name": "Figma MCP",
+    "type": "Industry Research",
+    "cited_by": [
+      "DEL-072"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-043",
+    "name": "Figma/Boyer",
+    "type": "Industry Research",
+    "cited_by": [
+      "CON-027"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-044",
+    "name": "GeneyMAP (CHI 2025)",
+    "type": "Academic/Institutional",
+    "cited_by": [
+      "DEF-013"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-045",
+    "name": "Gu et al. (AAA)",
+    "type": "Academic/Institutional",
+    "cited_by": [
+      "VAL-037"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-046",
+    "name": "Hsieh",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "IMP-061"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-047",
+    "name": "Irawati",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "EXP-006"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-048",
+    "name": "Knearem et al. (Google)",
+    "type": "Academic/Institutional",
+    "cited_by": [
+      "IMP-063"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-049",
+    "name": "Li / Maheshwari / Voelker",
+    "type": "Academic/Institutional",
+    "cited_by": [
+      "EXP-001"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-050",
+    "name": "Lu",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "IMP-060"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-051",
+    "name": "Maze AI Moderator",
+    "type": "Industry Research",
+    "cited_by": [
+      "EXP-007"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-052",
+    "name": "McDonald",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "IMP-061"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-053",
+    "name": "Mili\u0107 Kereste\u0161 et al.",
+    "type": "Academic/Institutional",
+    "cited_by": [
+      "VAL-038"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-054",
+    "name": "Mixpanel",
+    "type": "Industry Research",
+    "cited_by": [
+      "IMP-066"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-055",
+    "name": "Ogar",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "DEF-011"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-056",
+    "name": "Orego (5/5)",
+    "type": "Academic/Institutional",
+    "cited_by": [
+      "DEF-018"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-057",
+    "name": "UXAgent",
+    "type": "Industry Research",
+    "cited_by": [
+      "VAL-040"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-058",
+    "name": "UXCascade",
+    "type": "Industry Research",
+    "cited_by": [
+      "VAL-040"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-059",
+    "name": "Zhong",
+    "type": "Named Practitioner",
+    "cited_by": [
+      "IMP-059"
+    ],
+    "citation_count": 1
+  },
+  {
+    "id": "SR-060",
+    "name": "Zhu et al. (Frontiers 2024)",
+    "type": "Academic/Institutional",
+    "cited_by": [
+      "DEF-013"
+    ],
+    "citation_count": 1
+  }
+]

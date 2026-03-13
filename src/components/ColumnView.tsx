@@ -1,10 +1,14 @@
 import React, { useMemo, useState } from "react";
 import type { Phase, UseCase, StackingDimension, TooltipData } from "../types";
-import ucData from "../../data/DwAI_UC_Data.json";
+import ucData from "../../data/DwAI_UC_Data_v3.json";
 import tooltipJson from "../../data/DwAI_UC_Tooltips.json";
+import riskModalsJson from "../../data/DwAI_UC_RiskModals.json";
 import { StackingControls } from "./StackingControls";
 import { DetailPanel } from "./DetailPanel";
 import { FrameworkModal } from "./FrameworkModal";
+import { TableModal } from "./TableModal";
+import { RiskDetailModal } from "./RiskDetailModal";
+import type { TooltipData, RiskModalsData } from "../types";
 
 const phases: Phase[] = ["Explore", "Define", "Concept", "Validate", "Deliver", "Improve"];
 
@@ -16,6 +20,7 @@ interface UseCaseWithPhases extends UseCase {
 type FilterDimension = StackingDimension | "none";
 
 const tooltipData = tooltipJson as TooltipData;
+const riskModalsData = riskModalsJson as RiskModalsData;
 
 type FrameworkKind = "arrangement" | "value" | "risk" | "attestation" | "expertise";
 
@@ -39,7 +44,7 @@ function getGroupKey(uc: UseCaseWithPhases, dim: StackingDimension): string {
     case "attestation":
       return uc.attestation.level;
     case "risk":
-      return uc.risk_typology[0] ?? "Unspecified";
+      return uc.risk_typology[0]?.type ?? "Unspecified";
     case "value":
       return uc.value_hypothesis.types[0] ?? "Unspecified";
     default:
@@ -58,7 +63,7 @@ function getDynamicField(uc: UseCaseWithPhases, dim: StackingDimension): string 
     case "attestation":
       return uc.attestation.level;
     case "risk":
-      return uc.risk_typology[0] ?? "—";
+      return uc.risk_typology[0]?.type ?? "—";
     case "value":
       return uc.value_hypothesis.types[0] ?? "—";
     default:
@@ -71,12 +76,17 @@ function getFilterValue(uc: UseCaseWithPhases, dim: FilterDimension): string {
   return getGroupKey(uc, dim);
 }
 
+function displayName(name: string): string {
+  return name.replace(/\s*SUMMARY VIEW[\s\S]*$/i, "").trim();
+}
+
 export const ColumnView: React.FC = () => {
   const [stacking, setStacking] = useState<StackingDimension>("activity");
   const [filterDimension, setFilterDimension] = useState<FilterDimension>("none");
   const [filterValue, setFilterValue] = useState<string>("");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [openFramework, setOpenFramework] = useState<FrameworkKind | null>(null);
+  const [openRiskDetailType, setOpenRiskDetailType] = useState<string | null>(null);
 
   const allUseCases: UseCaseWithPhases[] = useMemo(
     () => (ucData as UseCase[]).map(normalizePhases),
@@ -137,32 +147,10 @@ export const ColumnView: React.FC = () => {
           rows
         };
       }
-      case "risk": {
-        const rows = Object.entries(tooltipData.risk_types).map(([term, entry]) => ({
-          term,
-          definition: entry.definition,
-          provenance: entry.provenance
-        }));
-        return {
-          title: "Risk Typology",
-          rationale:
-            "The Risk typology organizes eight recurring failure modes observed in AI-assisted design practice. It was derived bottom-up from empirical evidence rather than pre-seeded categories.",
-          rows
-        };
-      }
-      case "expertise": {
-        const rows = Object.entries(tooltipData.expertise_types).map(([term, entry]) => ({
-          term,
-          definition: entry.definition,
-          provenance: entry.provenance
-        }));
-        return {
-          title: "Expertise Differentiator Framework",
-          rationale:
-            "The Expertise framework decouples skill from job titles, describing the disciplines that separate AI-adequate output from expert-level work across roles.",
-          rows
-        };
-      }
+      case "risk":
+      case "expertise":
+      case "arrangement":
+        return null;
       case "attestation": {
         const levelRows = Object.entries(tooltipData.attestation_levels).map(
           ([term, entry]) => ({
@@ -185,25 +173,58 @@ export const ColumnView: React.FC = () => {
           rows: [...levelRows, ...diagnosticRows]
         };
       }
-      case "arrangement": {
-        const rows = Object.entries(tooltipData.arrangement_levels).map(
-          ([term, entry]) => ({
-            term,
-            definition: entry.definition,
-            provenance: entry.provenance
-          })
-        );
-        return {
-          title: "Human–AI Arrangement Framework",
-          rationale:
-            "The Arrangement framework describes who holds initiative and authority in a workflow — human or AI — across five governance levels, grounded in human-in-the-loop research.",
-          rows
-        };
-      }
       default:
         return null;
     }
   }, [openFramework]);
+
+  const expertiseTable = useMemo(
+    () => ({
+      columns: [
+        { key: "term", header: "Term" },
+        { key: "definition", header: "Definition" },
+        { key: "provenance", header: "Provenance" }
+      ],
+      rows: Object.entries(tooltipData.expertise_types).map(([term, entry]) => ({
+        term,
+        definition: entry.definition,
+        provenance: entry.provenance
+      }))
+    }),
+    []
+  );
+
+  const riskSummaryTable = useMemo(
+    () => ({
+      columns: [
+        { key: "term", header: "Risk Type" },
+        { key: "definition", header: "Definition" }
+      ],
+      rows: Object.entries(tooltipData.risk_types).map(([term, entry]) => ({
+        term,
+        definition: entry.definition
+      }))
+    }),
+    []
+  );
+
+  const arrangementTable = useMemo(
+    () => ({
+      columns: [
+        { key: "level", header: "Level" },
+        { key: "role", header: "Role" },
+        { key: "initiative", header: "Initiative" },
+        { key: "human_function", header: "Human Function" }
+      ],
+      rows: Object.entries(tooltipData.arrangement_levels).map(([, entry]) => ({
+        level: entry.level,
+        role: entry.role,
+        initiative: entry.initiative,
+        human_function: entry.human_function
+      }))
+    }),
+    []
+  );
 
   return (
     <div className="flex h-screen min-h-[720px] bg-slate-950 text-slate-50">
@@ -301,7 +322,7 @@ export const ColumnView: React.FC = () => {
                                     {uc.activity}
                                   </div>
                                   <div className="mb-1 line-clamp-2 text-[13px] font-semibold text-slate-50">
-                                    {uc.name}
+                                    {displayName(uc.name)}
                                   </div>
                                   <div className="flex items-center justify-between gap-2">
                                     <span className="inline-flex w-[80%] items-center rounded-md bg-slate-800/80 px-2 py-0.5 text-[10px] font-medium text-slate-100 border border-slate-700/70">
@@ -336,6 +357,7 @@ export const ColumnView: React.FC = () => {
             useCase={selectedUseCase}
             tooltipData={tooltipData}
             onOpenFramework={(kind) => setOpenFramework(kind)}
+            onOpenRiskDetail={(riskType) => setOpenRiskDetailType(riskType)}
           />
         </section>
 
@@ -345,6 +367,36 @@ export const ColumnView: React.FC = () => {
           rationale={frameworkConfig?.rationale ?? ""}
           rows={frameworkConfig?.rows ?? []}
           onClose={() => setOpenFramework(null)}
+        />
+
+        <TableModal
+          open={openFramework === "expertise"}
+          onClose={() => setOpenFramework(null)}
+          title="Expertise Differentiators"
+          columns={expertiseTable.columns}
+          rows={expertiseTable.rows}
+        />
+
+        <TableModal
+          open={openFramework === "risk"}
+          onClose={() => setOpenFramework(null)}
+          title="Risk in application"
+          columns={riskSummaryTable.columns}
+          rows={riskSummaryTable.rows}
+        />
+
+        <TableModal
+          open={openFramework === "arrangement"}
+          onClose={() => setOpenFramework(null)}
+          title="Human-AI Arrangement"
+          columns={arrangementTable.columns}
+          rows={arrangementTable.rows}
+        />
+
+        <RiskDetailModal
+          open={Boolean(openRiskDetailType)}
+          onClose={() => setOpenRiskDetailType(null)}
+          entry={openRiskDetailType ? riskModalsData[openRiskDetailType] ?? null : null}
         />
       </main>
     </div>
