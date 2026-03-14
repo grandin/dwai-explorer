@@ -356,11 +356,28 @@ export function ConstellationView() {
     return d3.zoomIdentity.translate(tx, ty).scale(k);
   }, [canvasWidth, canvasHeight]);
 
+  const applyFitTransform = useCallback(
+    (animate) => {
+      const { zoom, svg } = zoomRef.current || {};
+      if (!zoom || !svg?.node()) return;
+      const t = computeFitTransform();
+      const el = containerRef.current;
+      if (!el || el.clientWidth < 32 || el.clientHeight < 32) return;
+      const chain = animate
+        ? svg.transition().duration(150).ease(d3.easeCubicOut)
+        : svg;
+      chain.call(zoom.transform, t);
+      setZoomPercent(Math.round(t.k * 100));
+    },
+    [computeFitTransform]
+  );
+
   useEffect(() => {
     const svg = d3.select(svgRef.current);
     const g = d3.select(gRef.current);
     const svgNode = svgRef.current;
-    if (!svgNode || !gRef.current) return;
+    const container = containerRef.current;
+    if (!svgNode || !gRef.current || !container) return;
 
     const zoom = d3
       .zoom()
@@ -376,11 +393,6 @@ export function ConstellationView() {
       });
 
     zoomRef.current = { zoom, svg, g, computeFitTransform };
-
-    const t = computeFitTransform();
-    g.attr("transform", t);
-    setZoomPercent(Math.round(t.k * 100));
-    svg.call(zoom).call(zoom.transform, t);
 
     const onWheel = (event) => {
       event.preventDefault();
@@ -403,12 +415,24 @@ export function ConstellationView() {
         .call(zoom.transform, nt);
     };
     svgNode.addEventListener("wheel", onWheel, { passive: false });
+    svg.call(zoom);
+
+    const runFit = () => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => applyFitTransform(false));
+      });
+    };
+    runFit();
+
+    const ro = new ResizeObserver(() => runFit());
+    ro.observe(container);
 
     return () => {
+      ro.disconnect();
       svgNode.removeEventListener("wheel", onWheel);
       svg.on(".zoom", null);
     };
-  }, [computeFitTransform, canvasWidth, canvasHeight]);
+  }, [applyFitTransform, canvasWidth, canvasHeight]);
 
   const zoomIn = () => {
     const { zoom, svg } = zoomRef.current || {};
@@ -434,16 +458,7 @@ export function ConstellationView() {
       .call(zoom.scaleTo, k);
   };
 
-  const zoomReset = () => {
-    const { zoom, svg } = zoomRef.current || {};
-    if (!zoom || !svg) return;
-    const t = computeFitTransform();
-    svg
-      .transition()
-      .duration(150)
-      .ease(d3.easeCubicOut)
-      .call(zoom.transform, t);
-  };
+  const zoomReset = () => applyFitTransform(true);
 
   const dimmed = useCallback(
     (uc) =>
@@ -719,7 +734,7 @@ export function ConstellationView() {
   };
 
   return (
-    <div className="relative flex min-h-[800px] min-w-0 flex-1 flex-col bg-slate-950">
+    <div className="relative flex h-full min-h-0 w-full min-w-0 flex-1 flex-col bg-slate-950">
       <ArrangementLegend />
       {edgeTip && edgeTip.tip && (
         <div
@@ -831,14 +846,15 @@ export function ConstellationView() {
       )}
       <div
         ref={containerRef}
-        className="absolute inset-0 overflow-hidden rounded-xl border border-slate-800"
+        className="absolute inset-0 min-h-0 overflow-hidden rounded-xl border border-slate-800"
       >
         <svg
           ref={svgRef}
           width="100%"
           height="100%"
+          preserveAspectRatio="xMidYMid meet"
           viewBox={`0 0 ${canvasWidth} ${canvasHeight}`}
-          className="h-full w-full cursor-grab touch-none bg-slate-900/50 active:cursor-grabbing"
+          className="block h-full w-full min-h-0 cursor-grab touch-none bg-slate-900/50 active:cursor-grabbing"
         >
           <defs>
             <filter id="nodeSelGlow" x="-40%" y="-40%" width="180%" height="180%">
