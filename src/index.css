@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-background-primary: #0f172a;
+  --color-border-secondary: #475569;
+  --color-text-primary: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-pinned-edge: #ffffff;
+  --color-pinned-edge-glow: rgba(255, 255, 255, 0.4);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-background-primary: #ffffff;
+    --color-border-secondary: #e2e8f0;
+    --color-text-primary: #0f172a;
+    --color-text-muted: #64748b;
+    --color-pinned-edge: #1a1a1a;
+    --color-pinned-edge-glow: rgba(0, 0, 0, 0.25);
+  }
+}
+
 body {
   @apply bg-slate-950 text-slate-50 antialiased;
 }

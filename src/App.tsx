@@ -1,7 +1,7 @@
 import React from "react";
-import { ColumnView } from "./components/ColumnView";
+import { ExplorerApp } from "./components/ExplorerApp";
 
 export const App: React.FC = () => {
-  return <ColumnView />;
+  return <ExplorerApp />;
 };
 
