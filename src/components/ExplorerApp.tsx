@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import type { Phase, UseCase, StackingDimension } from "../types";
 import ucData from "../../data/DwAI_UC_Data_v4.json";
 import tooltipJson from "../../data/DwAI_UC_Tooltips.json";
@@ -57,6 +57,19 @@ function getFilterValue(uc: UseCaseWithPhases, dim: FilterDimension): string {
 
 function ExplorerInner() {
   const [view, setView] = useState<"columns" | "constellation">("columns");
+  const [wideEnough, setWideEnough] = useState(
+    typeof window !== "undefined" ? window.innerWidth >= 1200 : true
+  );
+  useEffect(() => {
+    const onResize = () => {
+      const w = window.innerWidth >= 1200;
+      setWideEnough(w);
+      if (!w && view === "constellation") setView("columns");
+    };
+    window.addEventListener("resize", onResize);
+    onResize();
+    return () => window.removeEventListener("resize", onResize);
+  }, [view]);
   const {
     selectedId,
     stacking,
@@ -182,7 +195,8 @@ function ExplorerInner() {
               DwAI Use Case Explorer
             </h1>
             <p className="mt-1 text-xs text-slate-400">
-              71 use cases · Column & Constellation views
+              71 use cases · Column view
+              {wideEnough ? " & Constellation (≥1200px)" : " (constellation ≥1200px width)"}
             </p>
           </div>
           <div className="flex rounded-lg border border-slate-700 bg-slate-900 p-0.5">
@@ -197,17 +211,19 @@ function ExplorerInner() {
             >
               Columns
             </button>
-            <button
-              type="button"
-              onClick={() => setView("constellation")}
-              className={`rounded-md px-4 py-1.5 text-sm font-medium ${
-                view === "constellation"
-                  ? "bg-slate-700 text-white"
-                  : "text-slate-400 hover:text-slate-200"
-              }`}
-            >
-              Constellation
-            </button>
+            {wideEnough && (
+              <button
+                type="button"
+                onClick={() => setView("constellation")}
+                className={`rounded-md px-4 py-1.5 text-sm font-medium ${
+                  view === "constellation"
+                    ? "bg-slate-700 text-white"
+                    : "text-slate-400 hover:text-slate-200"
+                }`}
+              >
+                Constellation
+              </button>
+            )}
           </div>
         </header>
 
@@ -226,7 +242,11 @@ function ExplorerInner() {
 
         <section className="flex min-h-0 flex-1 gap-3 overflow-hidden">
           <div className="flex h-full min-h-0 min-w-0 flex-1 flex-col overflow-hidden">
-            {view === "columns" ? <ColumnView /> : <ConstellationView />}
+            {view === "columns" || !wideEnough ? (
+              <ColumnView />
+            ) : (
+              <ConstellationView />
+            )}
           </div>
           <DetailPanel
             useCase={selectedUseCase}

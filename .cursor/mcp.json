@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "stitch": {
+      "url": "https://stitch.googleapis.com/mcp",
+      "headers": {
+        "X-Goog-Api-Key": "AQ.Ab8RN6JdMh59JuRph98uvaerdR9VdDy9Zf_Z1cPOCdhebzidlg"
+      }
+    },
+    "@21st-dev/magic": {
+      "command": "npx",
+      "args": ["-y", "@21st-dev/magic@latest"],
+      "env": {
+        "API_KEY": "83a4d34070a0b014b417e9c01c045209bc4d5d2181775b14878498b6186b66e8"
+      }
+    },
+    "nano-banana": {
+      "command": "npx",
+      "args": ["-y", "nano-banana-mcp"],
+      "env": {
+        "GEMINI_API_KEY": "AIzaSyCmZRwZjsTq883UrYxaPBM4NpaV6R8Wxjc"
+      }
+    }
+  }
+}
